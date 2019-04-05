@@ -1,2 +1,2 @@
 # portfolio
-Here will my projects, that i did ever. Sites or js codes
+My projects will be here, that I did ever. Sites or js codes
