@@ -1,0 +1,593 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.start {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#D9DCE4));
+  background-image: linear-gradient(to top, #ffffff, #D9DCE4);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1024px;
+  margin: 20px auto;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Параметры тени */
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(195, 164, 186, 0.5)), to(rgba(255, 255, 255, 0))), url(img/1.jpg);
+  background-image: linear-gradient(180deg, rgba(195, 164, 186, 0.5), rgba(255, 255, 255, 0)), url(img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 220px;
+  width: 20%;
+  height: 50px;
+  margin-left: 10px;
+}
+
+header .logo .img {
+  background-image: url(img/logo1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  width: 50px;
+  height: 50px;
+}
+
+header .logo h1 {
+  margin-left: 15px;
+  font-size: 25px;
+  color: white;
+  font-weight: 800;
+  text-shadow: -5px 0px 5px black, 2px -2px 5px black;
+}
+
+header .navbar {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+header .navbar ul {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .navbar ul li {
+  display: inline-block;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+header .navbar ul li:after {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+}
+
+header .navbar ul li:hover:after {
+  left: 0;
+}
+
+header .sign-out {
+  width: 50px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+header .sign-out a {
+  opacity: .2;
+  display: block;
+  position: relative;
+  font-size: 10px;
+  left: 0;
+}
+
+header .sign-out a p {
+  font-size: 20px;
+}
+
+header .sign-out:hover a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: -15px;
+  text-shadow: 15px 0 10px black;
+  opacity: 1;
+}
+
+main {
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .content #form-signin {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content #form-signin label {
+  position: relative;
+}
+
+main .content #form-signin h1 {
+  margin-bottom: 100px;
+  color: white;
+}
+
+main .content #form-signin input {
+  display: block;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+  border-bottom: 5px rgba(243, 187, 196, 0.493) solid;
+  text-align: center;
+}
+
+main .content #form-signin input:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .content #form-signin input[type="submit"] {
+  width: 100px;
+  cursor: pointer;
+}
+
+main .content #form-signin input[type="submit"]:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: rgba(243, 187, 196, 0.493);
+}
+
+main .content .screen {
+  width: 100%;
+  height: 600px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#D9DCE4));
+  background-image: linear-gradient(to top, #ffffff, #D9DCE4);
+  background-position: right;
+  margin: 20px 20px;
+  -webkit-box-shadow: -5px -5px 5px rgba(128, 128, 128, 0.432);
+          box-shadow: -5px -5px 5px rgba(128, 128, 128, 0.432);
+}
+
+main .content .screen .card-info {
+  margin: 30px 0;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content .screen .card-photo {
+  margin: 0 auto;
+  width: 200px;
+  height: 250px;
+  background-color: black;
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 0px 15px grey;
+          box-shadow: 0px 0px 15px grey;
+}
+
+main .content .screen .personal-info {
+  margin-top: 20px;
+}
+
+main .content .screen .personal-info h1 {
+  margin-bottom: 25px;
+}
+
+main .content .screen .personal-info p {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+main .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 40%;
+  text-align: center;
+}
+
+main .buttons input {
+  margin: 0 auto;
+  position: relative;
+  border: none;
+  outline: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(195, 164, 186, 0.5)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(195, 164, 186, 0.5), rgba(255, 255, 255, 0));
+  width: 70%;
+  height: 50px;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1234;
+  cursor: pointer;
+}
+
+main .buttons input:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: black;
+  -webkit-box-shadow: 0px 0px 10px #927d7d;
+          box-shadow: 0px 0px 10px #927d7d;
+}
+
+.data-base {
+  width: 800px;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(195, 164, 186, 0.5)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(195, 164, 186, 0.5), rgba(255, 255, 255, 0));
+}
+
+.data-base table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 5px;
+  background: #f5ebbf;
+  color: #656665;
+  border: 16px solid #ECE9E0;
+  border-bottom: none;
+  border-radius: 20px;
+  margin: 25px 25px;
+  width: 700px;
+}
+
+.data-base tr {
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 10px;
+  cursor: pointer;
+  max-width: 50px;
+}
+
+.data-base th {
+  font-size: 14px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 10px;
+  max-width: 50px;
+}
+
+.data-base tr:first-child {
+  cursor: default;
+}
+
+.data-base td {
+  background: #e8ece0;
+  padding: 10px;
+  width: 100px;
+  overflow: hidden;
+  max-width: 100px;
+}
+
+.data-base td:hover {
+  overflow: unset;
+}
+
+.data-base tr:hover td {
+  background: #f5ebbf;
+}
+
+input {
+  white-space: normal;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.transition-fade {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.transition-fade > .form::after {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.form {
+  position: absolute;
+  width: 500px;
+  height: 800px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c3a4ba), to(white));
+  background-image: linear-gradient(180deg, #c3a4ba, white);
+  width: 600px;
+  height: 450px;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 500;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.form .content {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.form .content h1 {
+  margin-bottom: 50px;
+}
+
+.form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .inputs input {
+  text-align: center;
+  width: 200px;
+  height: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+.form .inputs input:focus {
+  color: black;
+  background-color: white;
+}
+
+.form .inputs input[type="submit"] {
+  cursor: pointer;
+  background-color: #46999c;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  color: black;
+}
+
+.form .inputs input[type="submit"]:hover {
+  background-color: black;
+  color: #46999c;
+}
+
+.off {
+  position: relative;
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+}
+
+.off::after {
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-column input {
+  text-align: center;
+  width: 200px;
+  height: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+.flex-column input:focus {
+  color: black;
+  background-color: white;
+}
+
+.flex-column input[type="submit"] {
+  cursor: pointer;
+  background-color: #46999c;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  color: black;
+}
+
+.flex-column input[type="submit"]:hover {
+  background-color: black;
+  color: #46999c;
+}
+
+select {
+  background-image: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  width: 200px;
+  padding: 20px;
+  font-size: 20px;
+  color: #aeedee;
+  font-family: 'BRUSH SCRIPT MT';
+  line-height: 25px;
+}
+
+.block {
+  position: fixed;
+  top: 150px;
+  right: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: radial-gradient(circle, #eeaeb7 0%, #e394e9 100%);
+  background-position: center;
+  background-size: cover;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0px;
+  height: 200px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: 25px;
+  overflow: scroll;
+}
+/*# sourceMappingURL=style.css.map */

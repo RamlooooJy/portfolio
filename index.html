@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Data Base App</title>
+    <script async src="adds/jQuery.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="form" hidden>
+        <div class="content">
+            <h1>Регистрация нового пациента</h1>
+            <div class="inputs">
+                <input type="text" placeholder="fio">
+                <input type="text" placeholder="birthday in format 0000-00-00">
+                <input type="text" placeholder="Disease">
+                <input type="text" placeholder="Room">
+                <input type="text" placeholder="Street">
+                <input type="text" placeholder="House">
+                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Login">
+                <input type="text" placeholder="Password">
+                <input id="addNewPatient" type="submit" value="Sign up">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <header>
+            <a href="#">
+                <div class="logo">
+                    <div class="img">
+
+                    </div>
+                    <h1>
+                        My Hospital
+                    </h1>
+                </div>
+            </a>
+
+            <div class="navbar">
+                <ul>
+                    <a href="#" class="home link" hidden>
+                        <li> Home </li>
+                    </a>
+                    <a href="#" class="profile link" hidden>
+                        <li> Profile </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="sign-out link" hidden>
+                <a href="#">  Exit <p data-content="login"> login</p>  </a>
+            </div>
+        </header>
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <main>
+            <div class="workspace" hidden>
+
+                <div class="content">
+                    <div class="screen">
+                        <div class="data-base">
+                            <table class="db-table">
+                                <tr id="maket">
+                                    <th>ID</th>
+                                    <th>ФИО</th>
+                                    <th>Дата рождения</th>
+                                    <th>Адрес</th>
+                                    <th>Болезнь</th>
+                                    <th>Номер телефона</th>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="button-view">
+                            <input type="submit" value="Обновить базу данных">
+                        </div>
+
+                        <div class="button-viewDoctors" hidden>
+                            <input type="submit" value="База данных докторов">
+                        </div>
+
+                        <div class="button-viewPatients" hidden>
+                            <input type="submit" value="База данных пациентов">
+                        </div>
+
+                        <div class="button-add">
+                            <input type="submit" value="Регистрация нового пациента">
+                        </div>
+
+                        <div class="button-addDoc" hidden>
+                            <input type="submit" value="Регистрация нового Доктора">
+                        </div>
+
+                        <div class="button-createHealing" hidden>
+                            <input type="submit" value="Назначить лечение">
+                        </div>
+
+                    </div>
+                    <div class="block" hidden>
+                        <select id="fir" class="dropdown" placeholder="Choose doctor">
+                              <option>Чурка Печурка</option>
+                              <option>List entry #2</option>
+                              <option>List entry #3</option>
+                              <option>List entry #4</option>
+                        </select>
+
+                        <select id="sec" class="dropdown" placeholder="Choose doctor">
+                              <option>Чурка Печурка</option>
+                              <option>List entry #2</option>
+                              <option>List entry #3</option>
+                              <option>List entry #4</option>
+                              </select>
+
+                        <input id="send" type="submit" value="Create"> </input>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! Доктор  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <div class="person" hidden>
+
+                <div class="content" hidden>
+                    <div class="screen">
+                        <div class="card-info">
+                            <div class="card-photo">
+                                <!-- image -->
+                            </div>
+                            <div class="card-name">
+                                <h2 id="username">Username</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen">
+                        <div class="personal-info">
+                            <h1>Personal card</h1>
+                            <!-- !!
+                            
+TODO
+                            !!-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- TODO:!!!!!!!!!!!!!!!!!!!!!!! Карта  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <div class="start">
+                <div class="content">
+                    <!-- <form action="php/insertData.php" id="form-signin" method="POST"> -->
+                    <div id="form-signin">
+                        <h1>Sign In</h1>
+                        <label for="">
+                            Login
+                        <input type="text" name="login">
+
+                        </label>
+                        <label for="">
+                            Password
+                        <input type="password" name="password" id="pas">
+
+                        </label>
+                        <input type="submit" value="Sign In">
+                    </div>
+
+                    <!-- </form> -->
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </main>
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!! ВХОД  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    </div>
+
+    <script src="adds/some.js"></script>
+
+</body>
+
+</html>
