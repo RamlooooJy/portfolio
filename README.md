@@ -1,2 +1,2 @@
 # portfolio
-My projects will be here, that I did ever. Sites or js codes
+it is my last project from university. I have used here sql, php, js(ajax, jquery), html, css(scss)  
