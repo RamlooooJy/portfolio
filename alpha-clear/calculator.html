@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/font/stylesheet.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/css/stylish-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blocks.css">
+    <title>Alpha</title>
+    <script src="js/libs/daterangepicker.js"></script>
+</head>
+<body class="preload">
+<script>
+    var apiUrl = 'https://box.srvtests.com/tariff_calculator/api/calculate/';
+</script>
+<header class="alp-header_border">
+    <div class="alp-header alp-header_light">
+        <div class="alp-container">
+            <div class="alp-header__left">
+                <a href="/" class="alp-logo"></a>
+                <div class="alp-header__phone"><a href="tel:88002000600">8 (800) 2000-600</a></div>
+            </div>
+            <div class="alp-header__right">
+                <nav class="alp-header__menu">
+                    <a href="index.html">Экспресс-гарантии</a>
+                    <a href="agent.html">Агентам</a>
+                    <a href="calculator.html">Калькулятор</a>
+                    <a href="rko.html">Теxподдержка(RKO)</a>
+                </nav>
+                <a href="#" class="alp-btn_auth">Войти</a>
+            </div>
+            <div class="alp-burger alp-burger_black">
+                <svg viewBox="0 0 40 24">
+                    <rect y="0.95652" width="40" height="3.47826" rx="1.73913" fill="#EEEEEE"/>
+                    <rect y="10.4348" width="13.913" height="3.47826" rx="1.73913" fill="#EEEEEE"/>
+                    <rect x="19.1304" y="10.4348" width="20.8696" height="3.47826" rx="1.73913" fill="#EEEEEE"/>
+                    <rect y="19.913" width="40" height="3.47826" rx="1.73913" fill="#EEEEEE"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="alp_blue">
+    <div class="alp-clear"></div>
+
+    <div class="alp-container alp-container__mini">
+        <div class="alp-block__title">
+            <div class="alp-navigation">
+                <a class="alp-home" href="index.html"></a>
+                <p>Расчитайте стоимость банковской гаранти</p>
+            </div>
+            <h1 class="alp-calc__title">
+                Рассчитайте стоимость банковской гарантии
+            </h1>
+        </div>
+        <div class="alp-calc__wrapper">
+            <form onsubmit="openCalcRequest(this); return false;">
+
+                <link rel="stylesheet" href="css/calc.css">
+
+                <div class="alp-calc">
+                    <div class="alp-calc__container">
+                        <div class="alp-select">
+                            <select data-color="false" name="fz" id="alp-fz" onchange="getResult()">
+                                <option selected disabled value></option>
+                                <option value="2">223-ФЗ</option>
+                                <option value="3">44-ФЗ</option>
+                                <option value="4">185 ФЗ/615 ПП</option>
+                                <option value="5">отсутствует</option>
+                            </select>
+                            <span>Федеральный закон</span>
+                        </div>
+                        <div class="alp-select">
+                            <select data-color="false" name="product" id="alp-product" onchange="getResult()">
+                                <option selected disabled value></option>
+                                <option value="1">Банковская гарантия на исполнение контракта</option>
+                                <option value="3">Банковская гарантия на участие</option>
+                                <option value="6">Банковская гарантия обеспечения гарантийных обязательств</option>
+                                <option value="8">Расчетно-кассовое обслуживание</option>
+                            </select>
+                            <span>Гарантии</span>
+                        </div>
+
+                        <div class="alp-input alp-range">
+                            <label>
+                                <input type="text" name="sum" id="alp-sum" required>
+                                <span>Необходимая сумма гарантии</span>
+                            </label>
+                            <input type="range" id="alp-calc-sum">
+
+                        </div>
+                        <div class="alp-input alp-range">
+                            <label>
+                                <input type="text" name="time" id="rgsTime" required>
+                                <span>Срок в днях</span>
+                            </label>
+                            <input type="range" id="alp-calc-date">
+
+                        </div>
+                        <div class="alp-calc__container-item__label-select">
+                            <div class="alp-input" id="main__time-from">
+                                <label>
+                                    <input class="alp-date" name="date1" id="main__time-from-input" readonly/>
+                                    <span>Дата начала</span>
+                                </label>
+                            </div>
+                            <div class="alp-input" id="main__time-to">
+                                <label>
+                                    <input class="alp-date" name="date2" id="main__time-to-input" readonly/>
+                                    <span>Дата окнончания</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="alp-modal__agreement">
+                            <div class="alp-checkbox">
+                                <input name="advance" type="checkbox" checked="" id="alp-advance" onchange="getResult()">
+                                <label for="alp-advance">
+                                    <div>Наличие аванса</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alp-calc__container-item">
+                        <div class="alp-calc-title">Стоимость банковской гарантии</div>
+                        <div class="alp-calc-description">Предварительная оценка стоимости по минимальному тарифу банка
+                            *
+                        </div>
+                        <div class="alp-calc__container-item__sum">
+                            <p id="alp-finalSum">0 ₽</p>
+                        </div>
+                        <div class="alp-calc__container-item__button">
+                            <button id="alp-btn-request" class="alp-btn">Подать заявку</button>
+                            <p>Не предоставляется, попробуйте изменить условия</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="alp-cookie">
+            <p>Калькулятор расчета БГ поможет сделать предварительную оценку стоимости по минимальному тарифу
+                банка.*</p>
+            <p>Онлайн расчет производится по стандартным тарификаторам. Если вы хотите узнать точную цену, Вы можете
+                отправить заявку (кликнув на кнопку «оформить гарантию»). После с Вами свяжется менеджер, уточнив все
+                детали, произведет детальный расчет стоимости банковской гарантии.</p>
+            <p>* Фактическая стоимость БГ может отличаться от указанной в калькуляторе. Также примите во внимание, что
+                Банк
+                может Вам отказать в выдаче банковской гарантии в том случае, если посчитает, что риски для него слишком
+                велики, т.к. в случае неисполнения контракта именно банк будет выплачивать государственному заказчику
+                неустойку.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="alp-container">
+        <p>На нашем сайте мы используем cookie для сбора информации технического характера и обрабатываем данные об
+            IP-адресе, Вашем местоположении без указания фамилии и имени, продолжая использовать сайт, Вы даете на это
+            свое согласие.</p>
+        <p>© 2001-2020. АО «Альфа-Банк», официальный сайт. Генеральная лицензия Банка России № 1326 от 16 января 2015 г.
+            АО АЛЬФА-БАНК является участником системы обязательного страхования вкладов. Информация о максимальных
+            процентных ставках по вкладам физических лиц. Центр раскрытия корпоративной информации. Информация
+            профессионального участника рынка ценных бумаг. Информация о лицах, под контролем либо значительным влиянием
+            которых находится Банк. Ул. Каланчевская, 27, Москва, 107078. АО «Альфа-Банк» использует файлы «cookie» с
+            целью персонализации сервисов и повышения удобства пользования веб-сайтом. Если Вы не хотите, чтобы Ваши
+            пользовательские данные обрабатывались, пожалуйста, ограничьте их использование в своём браузере</p>
+        <div class="alp-footer__links">
+            <div><a href="#">Техническая поддержка</a></div>
+            <div><a href="#">Политика обработки ПД</a></div>
+            <div><a href="#">Пользовательское соглашение</a></div>
+            <div><a href="#">Разработано ServiceHub</a></div>
+        </div>
+    </div>
+</footer>
+
+
+<div style="display: none;">
+    <div class="box-modal" id="calc-request-modal">
+        <div class="box-modal_close arcticmodal-close"></div>
+        <div class="alp-modal">
+            <form onsubmit="sendRequest(this); return false;">
+                <h5 class="alp-modal-title">Нужна помощь?</h5>
+                <div class="alp-modal__form">
+                    <input id="calc-data" type="hidden">
+                    <div class="alp-input">
+                        <label>
+                            <input required name="name" type="text">
+                            <span>Имя</span>
+                        </label>
+                    </div>
+                    <div class="alp-input">
+                        <label>
+                            <input required name="email" type="email">
+                            <span>Электронная почта*</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="alp-modal__agreement">
+                    <div class="alp-checkbox">
+                        <input required id="modal-agree-help" type="checkbox" name="agree" checked hidden>
+                        <label for="modal-agree-help">
+                            <div>Я даю согласие на обработку <a href="#">ПД</a></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="alp-btn__container">
+                    <button class="alp-btn">Подать заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="box-modal" id="good-request">
+        <div class="box-modal_close arcticmodal-close"></div>
+        <div class="alp-modal alp-modal-good">
+            <div class="alp-modal-good__response">
+                <h4>Заявка отправлена</h4>
+                <div style="background: url('css/img/banner1-back-element.svg') no-repeat center bottom; background-size: contain; height: 200px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/libs/libraries.js"></script>
+<script src="js/libs/daterangepicker.js"></script>
+<script src="js/app.js"></script>
+<script src="js/calc.js"></script>
+</body>
+</html>

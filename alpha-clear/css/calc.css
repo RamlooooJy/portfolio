@@ -1,0 +1,311 @@
+.alp-calc {
+    background: #ffffff;
+    padding: 48px 24px;
+    box-shadow: 0px 4px 24px rgba(11, 31, 53, 0.08);
+    border-radius: 8px;
+}
+
+.alp-block__title {
+    padding-bottom: 32px;
+}
+
+.alp-calc__title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.alp-calc__container-item__label {
+    padding-bottom: 25px;
+}
+
+
+.alp-select-container input {
+    cursor: pointer;
+}
+
+
+.alp-btn {
+    width: 100%;
+}
+
+.alp-calc__container-item {
+    padding: 32px;
+    box-sizing: border-box;
+    border: 1px solid rgba(11, 31, 53, 0.1);
+    border-radius: 8px;
+    max-width: 364px;
+}
+
+.alp-calc__container-item__sum {
+    padding-bottom: 40px;
+}
+
+.alp-calc__container {
+    padding-bottom: 48px;
+}
+
+.alp-calc-title {
+    color: rgba(11, 31, 53, 0.9);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+    padding-bottom: 16px;
+}
+
+.alp-calc-description {
+    color: rgba(11, 31, 53, 0.6);
+    font-size: 14px;
+    line-height: 21px;
+    padding-bottom: 16px;
+}
+
+#alp-finalSum {
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: 600;
+    color: #0B1F35;
+    padding: 0;
+}
+
+.alp-checkbox {
+    justify-content: center;
+}
+
+.alp-calc__wrapper {
+    padding-bottom: 53px;
+}
+
+.alp-cookie {
+    padding-bottom: 44px;
+}
+
+.alp-cookie p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+@media screen and (min-width: 600px) {
+    .alp-block__title {
+        padding-bottom: 40px;
+    }
+
+    .alp-cookie {
+        padding-bottom: 52px;
+    }
+
+    .alp-calc__wrapper {
+        padding-bottom: 40px;
+    }
+
+    .alp-calc {
+        padding: 64px 52px;
+    }
+
+    .alp-calc__container-item {
+        max-width: 364px;
+        height: 346px;
+        padding-bottom: 0;
+    }
+
+    .alp-calc__title {
+        font-size: 36px;
+    }
+
+    .alp-calc__container-item__label-select {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .alp-calc__container-item__label-select .alp-input {
+        width: calc(50% - 12px);
+    }
+
+    .alp-checkbox {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    .alp-cookie {
+        padding-bottom: 72px;
+    }
+
+    .alp-calc {
+        display: flex;
+        justify-content: space-between;
+        padding: 64px;
+    }
+
+    .alp-calc__container {
+        width: 600px;
+        padding-right: 48px;
+        padding-bottom: 0;
+
+    }
+
+}
+
+.alp-calc__container-item__button button.disable {
+    display: none;
+}
+
+.alp-calc__container-item__button p {
+    display: none;
+}
+
+.alp-calc__container-item__button button.disable + p {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #B31B2C;
+}
+
+.alp-checkbox span {
+    font-size: 14px;
+}
+
+#alp-calc-sum {
+    width: 100%;
+}
+.alp-range label input{
+    position: relative;
+    z-index: 2;
+}
+
+
+/*RAAAANGE*/
+
+.irs--flat .irs-grid-pol,
+.irs--round .irs-grid-pol,
+.irs--round .irs-single {
+    display: none;
+}
+
+
+.irs--round .irs-handle {
+    top: 28px;
+    border: none;
+    background: #EF3124;
+    box-shadow: 0 2px 8px rgba(239, 49, 36, 0.18),
+    0 0 2px rgba(239, 49, 36, 0.12),
+    0 0 1px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+}
+.irs--round .irs-handle:hover,
+.irs--round .irs-handle.state_hover, .irs--round .irs-handle:hover {
+    background: #ED4D42;
+}
+.irs--round .irs-bar {
+    background: #ED4D42;
+    z-index: 3;
+}
+.irs--round .irs-line{
+    background: #C4C4C4;
+    z-index: 3;
+}
+.irs--round.irs-with-grid{
+    margin-top: -40px;
+}
+
+/*libraries*/
+/* SETTINGS */
+.stylish-select-container::after{
+    content: attr(data-select-label);
+    color: rgba(11, 31, 53, 0.6);
+    position: absolute;
+    pointer-events: none;
+    top: 25%;
+    left: 10px;
+    font-size: 16px;
+    transition: 300ms ease;
+}
+span.alp-date-active{
+    top: 17px !important;
+    font-size: 13px !important;
+}
+.stylish-select-container.select-fill::after{
+    top: 9%;
+    font-size: 13px;
+}
+
+.stylish-select-container > .stylish-select-list {
+    max-height: 260px;
+}
+
+.stylish-select-container > .stylish-select-selected {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    color: rgba(11, 31, 53, 0.6);
+    border-bottom: 1px solid #c4c4c4;
+    background: #F3F4F5;
+    border-radius: 4px 4px 0px 0px;
+}
+.stylish-select-container > .stylish-select-selected:hover {
+    border-bottom: 1px solid #0B1F35;
+}
+
+.stylish-select-container.select-fill > .stylish-select-selected {
+    color: #0B1F35;
+}
+.stylish-select-container > .stylish-select-selected::before {
+    transform-origin: center;
+    transition: 300ms ease;
+    pointer-events: none;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    right: 17px;
+    top: 26px;
+    transform: rotate(-45deg);
+}
+
+.stylish-select-container > .stylish-select-list {
+    box-sizing: border-box;
+    background-color: white;
+    color: #0B1F35;
+    border:none;
+    font-weight: 300;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0px 10px 18px 0px #00000059;
+}
+
+.stylish-select-container > .stylish-select-list > li:hover {
+    background-color: #F3F4F5;
+    color: #081926;
+}
+
+.stylish-select-container[data-select-state='open'] > .stylish-select-selected {
+    border-bottom: 2px solid #0B1F35;
+}
+.stylish-select-container[data-select-state='open'] > .stylish-select-selected::before {
+    transform: rotate(135deg);
+    top: 28px;
+
+}
+.stylish-select-container > .stylish-select-selected {
+    transition: 300ms ease;
+    padding-top: 30px;
+
+    height: 64px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.stylish-select-container *{
+    outline: none;
+}
+.stylish-select-container {
+    padding-bottom: 24px;
+    outline: none;
+}
+.stylish-select-container > .stylish-select-list > li:first-child {
+    display: none;
+}
